@@ -4,6 +4,8 @@ from random import choice, randint, shuffle
 import pyperclip
 import json
 
+DATA_DIRECTORY = "python_password_manager/passwords.json"
+LOGO_DIRECTORY = "python_password_manager/logo.png"
 
 def password_generator():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -32,7 +34,7 @@ def find_password():
     website = entry_website.get()
 
     try:
-        with open('python_password_manager/passwords.json', mode = "r") as file:
+        with open(DATA_DIRECTORY, mode = "r") as file:
             data = json.load(file)
     except FileNotFoundError:
         messagebox.showerror(title="Error", message="No Data File Found")
@@ -63,17 +65,17 @@ def save():
         messagebox.showerror(title="Oops", message="Please don't leave any fields empty!")
     else:
         try:
-            with open('python_password_manager/passwords.json', mode = "r") as file:
+            with open(DATA_DIRECTORY, mode = "r") as file:
                 # Reading Old data
                 data = json.load(file)
         except FileNotFoundError:
-            with open('python_password_manager/passwords.json', mode = "a") as file:
+            with open(DATA_DIRECTORY, mode = "a") as file:
                 json.dump(new_data, file, indent=4)
         else:
             # Updating old data with new data
             data.update(new_data)
 
-            with open('python_password_manager/passwords.json', mode = "w") as file:
+            with open(DATA_DIRECTORY, mode = "w") as file:
                 # Saving updated data
                 json.dump(data, file, indent=4)
         finally:
@@ -87,7 +89,7 @@ window.title("Password Manager")
 window.config(padx=50, pady=50)
 
 canvas = Canvas(width=200, height=200, highlightthickness=0)
-password_img = PhotoImage(file="python_password_manager/logo.png")
+password_img = PhotoImage(file=LOGO_DIRECTORY)
 canvas.create_image(100, 100, image=password_img)
 canvas.grid(column=1,row=0)
 

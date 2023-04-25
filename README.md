@@ -34,3 +34,11 @@ The data is stored locally in your computer in a JSON format.
 </details>
 
 If you want to change the data directory, simply change the constant DATA_DIRECTORY (line: 7) or if you want to constumize how many letters, numbers and symbol that you want in your password, change the randint function inside of a range function (lines: 17; 18; 19).
+
+### [Snake Game](https://github.com/matheusfarnetani/python_studies/blob/main/python_snake_game/snake_game.py)
+
+As know, the snake game is a classic one.
+
+To play, simply run snake_game.py and use the arrows key to move.
+
+The code was written using turtle library, so you don't need to install nothing more than python itself, it also saves the highscore of all time inside a .txt file and it was an exercise from Dr. Angela Yu's Python Bootcamp, in order to teach object oriented programming.

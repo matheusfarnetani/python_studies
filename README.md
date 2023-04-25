@@ -1,9 +1,9 @@
 <a name="readme-top"></a>
 
-# studies
-A repository for sharing my studies
+# python_studies
+A repository for sharing my studies. Below you can read an about the codes:
 
-## Python list of folders and abouts
+## Abouts
 
 ### [Guess Game](https://github.com/matheusfarnetani/studies/blob/main/python_guess_game/guess_game.py)<br>
 Develop a guess the number game, where the computer chooses a random integer from 0 to 10, and the user has 5 attempts to guess the number.
@@ -12,5 +12,6 @@ Develop a guess the number game, where the computer chooses a random integer fro
 * Implement the option for the user to start a new game. At the end of a round, after the final result, the game must ask if the player wants to start a new game and, if not, close the application.
 
 
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+| Diagram                                            |
+| ------------------------------------------------------------ | 
+| ![Diagram](https://drive.google.com/file/d/1NaIrkHa1X1Jw_Kb6lBLADxr0EeqDXnmI/view?usp=sharing) |

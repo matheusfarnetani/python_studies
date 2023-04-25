@@ -124,8 +124,8 @@ def play():
 while True:
     play()
 
-    play_again = input("Do you wan't to play again? ")
-    if play_again.lower() == "yes":
+    play_again = input("Do you wan't to play again? ").lower()
+    if play_again.lower() == "yes" or play_again.lower() == "y":
         pass
     else:
         break
